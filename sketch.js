@@ -2,9 +2,9 @@ let treeStages = [];
 let currentStage = 0;
 
 function preload() {
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 9; i++) {
     // Assuming 5 stages
-    treeStages[i] = loadImage(`t${i}.png`);
+    treeStages[i] = loadImage(`${i}.png`);
   }
   console.log("treeStages", treeStages);
 }
@@ -19,7 +19,7 @@ function draw() {
   background(255); // White background
 
   // Display the current stage of the tree
-  image(treeStages[currentStage], width / 2 - 100, height / 2 - 100, 150, 400); // Adjust position and size as needed
+  image(treeStages[currentStage], width / 2 - 100, height / 2 - 100, 250, 300); // Adjust position and size as needed
 
   // Increment the stage to simulate growth
   if (frameCount % 6 == 0) {
